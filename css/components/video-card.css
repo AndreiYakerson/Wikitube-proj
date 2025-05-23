@@ -1,0 +1,11 @@
+
+.video-card {
+    border: solid 1px;
+    background-color: rgb(222, 146, 5);
+    box-shadow: 0 0 6px 1px #000000b8;
+}
+
+.video-card:hover {
+    background-color: rgba(221, 240, 17, 0.189);
+    cursor: pointer;
+}

@@ -1,0 +1,21 @@
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--clr-brand-0);
+    height: 100vh;
+}
+
+h1,h2,h3,h4,h5,h6,h7,h8 {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
