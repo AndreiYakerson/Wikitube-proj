@@ -13,22 +13,15 @@ function onInit() {
         .then(renderWikResults)
 }
 
-function renderMainVideo(id) {
-    const elMainVideo = document.querySelector('iframe')
-    elMainVideo.src = `https://www.youtube.com/embed/${id}`
-}
-
+//RENDER FUNCTIONS
 
 function renderVideoResults(data) {
     const elResult = document.querySelector('.video-results')
     let strHTML = ''
 
-
     data.items.forEach(item => {
-
-
         strHTML += `
-        <article onclick="onCardClick('${item.id.videoId}')" class="video-card">
+        <article onclick="onCardClick('${item.id.videoId}')" class="card video-card">
         <img class="card-img" src="${item.snippet.thumbnails.high.url}">
         <div class="card-info">
         <h3 class="card-title">${item.snippet.title}</h3>
@@ -37,7 +30,6 @@ function renderVideoResults(data) {
         </article>
         `
     })
-
 
     elResult.innerHTML = strHTML
     return data
@@ -49,20 +41,23 @@ function renderWikResults(data) {
 
     data.query.search.slice(0, 2).forEach(item => {
         strHTML += `
-            <article class="card-wik">
-            <a href="https://en.wikipedia.org/wiki/${item.title}">${item.title}</a>
-            <div>${item.snippet}</div>
-            </article>
+        <article class="card card-wik">
+        <a href="https://en.wikipedia.org/wiki/${item.title}">${item.title}</a>
+        <div>${item.snippet}</div>
+        </article>
         `
-
     })
 
     elResult.innerHTML = strHTML
 
 }
 
+function renderMainVideo(id) {
+    const elMainVideo = document.querySelector('iframe')
+    elMainVideo.src = `https://www.youtube.com/embed/${id}`
+}
 
-
+//ONCLICK FUNCTIONS
 
 function onSearchClick(ev) {
     ev.preventDefault()
@@ -78,8 +73,6 @@ function onSearchClick(ev) {
 
     getWData(searchValue)
         .then(renderWikResults)
-    // console.log(getData('nba'));
-
 
 }
 

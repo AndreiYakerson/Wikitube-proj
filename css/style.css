@@ -1,7 +1,4 @@
 
-
-
-
 /* VARS */
 @import url('vars.css');
 
@@ -14,6 +11,8 @@
 /* COMPONENTS */
 @import url('components/search-container.css');
 @import url('components/video-card.css');
+@import url('components/wik-card.css');
+@import url('components/iframe.css');
 
 
 /* MQ */

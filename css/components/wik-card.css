@@ -1,0 +1,10 @@
+
+.card-wik {
+    border-left: solid rgb(31, 31, 30) 4px;
+    border-radius: 1em;
+    padding: 10px;
+}
+
+.card-wik:hover {
+    background-color: rgba(221, 240, 17, 0.189);
+}

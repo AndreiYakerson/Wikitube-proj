@@ -19,3 +19,12 @@ h1,h2,h3,h4,h5,h6,h7,h8 {
 img {
     width: 100%;
 }
+
+.card {
+    background-color: var(--clr-brand-1);
+    box-shadow: 0 0 6px 1px black;
+}
+
+.card:hover {
+    background-color: var(--clr-brand-2);
+}
